@@ -97,7 +97,6 @@ input {
   font-weight: 500;
   font-size: 20px;
   line-height: 16px;
-  letter-spacing: 0%;
   margin-top: 20px;
 }
 .form-box {
@@ -107,7 +106,6 @@ input {
   font-weight: 500;
   font-size: 20px;
   line-height: 16px;
-  letter-spacing: 0%;
 }
 
 /* Styles for inline block */
@@ -148,7 +146,6 @@ input {
   background-color: #46a358;
   border-radius: 6px;
   padding: 3px 17px 3px 0px;
-  letter-spacing: 0%;
   vertical-align: middle;
   text-align: center;
 }
@@ -203,7 +200,6 @@ input {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 10%;
   margin: 68px 0 0 43px;
   padding: 0;
   color: #3d3d3d;
@@ -214,7 +210,6 @@ input {
   font-weight: 900;
   font-size: 70px;
   line-height: 70px;
-  letter-spacing: 0%;
   color: #3d3d3d;
   text-transform: uppercase;
   margin: 7px 0px 5px 40px;
@@ -241,7 +236,6 @@ input {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: 0%;
   margin: 0 0 85px 41px;
   text-transform: uppercase;
   padding: 11px 27px 9px 26px;
