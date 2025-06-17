@@ -111,17 +111,16 @@ input {
 /* Styles for inline block */
 .page {
   max-width: 1440px;
-  padding: 50px 120px 50px 120px;
-  margin: 0 auto;
+  padding: 50px 120px;
+  /* margin: 0 auto; */
 }
 .intro {
   font-size: 0;
   background-color: #f5f5f580;
   padding: 10px;
 }
-.header-menu {
+.header {
   font-size: 0;
-  display: inline-block;
   width: 100%;
   border-bottom: 1px solid rgba(70, 163, 88, 0.5);
   padding-bottom: 13px;
@@ -160,7 +159,6 @@ input {
   vertical-align: middle;
 }
 .nav-list {
-  font-weight: 400;
   font-size: 16px;
 }
 .nav-list li {
@@ -170,6 +168,7 @@ input {
 }
 .link-list:hover {
   position: relative;
+  font-weight: 700;
 }
 .link-list:hover::after {
   content: "";
@@ -200,7 +199,6 @@ input {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  margin: 68px 0 0 43px;
   padding: 0;
   color: #3d3d3d;
   text-transform: uppercase;
@@ -212,7 +210,7 @@ input {
   line-height: 70px;
   color: #3d3d3d;
   text-transform: uppercase;
-  margin: 7px 0px 5px 40px;
+  margin: 0;
 }
 .intro-text {
   font-size: 14px;
@@ -220,23 +218,28 @@ input {
   font-size: 14px;
   line-height: 24px;
   color: #727272;
-  margin-left: 43px;
-  margin: 0 0 44px 43px;
+  margin: 0;
 }
 .title-planet {
   color: #46a358;
 }
 .intro-button {
-  width: 140px;
+  min-width: 140px;
   height: 40px;
-  border: none;
+  border: 1px solid #46a358;
   border-radius: 6px;
   background-color: #46a358;
   color: white;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  margin: 0 0 85px 41px;
+  margin: 0;
   text-transform: uppercase;
   padding: 11px 27px 9px 26px;
+  display: inline-block;
+}
+.intro-button:hover {
+  background-color: #f5f5f580;
+  color: green;
+  border-color: green;
 }
