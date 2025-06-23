@@ -1,5 +1,12 @@
 @font-face {
   font-family: "Cera Pro";
+  src: local("Cera Pro"), url("../fonts/CeraPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cera Pro";
   src: local("Cera Pro"), url("../fonts/CeraPro-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -7,7 +14,7 @@
 }
 @font-face {
   font-family: "Cera Pro";
-  src: local("Cera Pro"), url("../fonts/CeraPro-Regular.woff2") format("woff2");
+  src: local("Cera Pro"), url("../fonts/CeraPro-Medius.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -21,7 +28,7 @@
 }
 @font-face {
   font-family: "Cera Pro";
-  src: local("Cera Pro"), url("../fonts/CeraPro-Bold.woff2") format("woff2");
+  src: local("Cera Pro"), url("../fonts/CeraPro-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -57,7 +64,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #727272;
+  color: rgba(61, 61, 61, 1);
 }
 ul {
   list-style: none;
@@ -204,6 +211,10 @@ input {
   font-weight: 700;
   /* border-bottom: 2px solid #46a358; */
 }
+.nav-link:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+}
 .nav-list li {
   display: inline-block;
   margin-right: 30px;
@@ -296,12 +307,14 @@ input {
 .content {
   float: right;
   width: 80%;
+  padding-left: 20px;
 }
-.container.clearfix::after {
+.clearfix::after {
   content: "";
   display: block;
   clear: both;
 }
+
 .content,
 .filters,
 .sort-menu,
@@ -314,12 +327,14 @@ input {
   justify-content: space-between;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
-.sort-list li {
-  padding: 10px 20px;
-}
+
 #select {
   border: none;
+  font-size: 15px;
+  line-height: 16px;
+  color: rgba(61, 61, 61, 1);
 }
 .categories {
   background-color: rgba(251, 251, 251, 1);
@@ -327,15 +342,120 @@ input {
 }
 .categories-list {
   margin-bottom: 60px;
+  font-size: 15px;
+  line-height: 40px;
+  color: rgba(61, 61, 61, 1);
 }
-.categories-list li {
+.categories-link {
   padding: 5px 30px 10px 15px;
 }
-.sort-link.active {
-  position: relative;
-}
-
 .categories-link.active a {
   color: rgba(70, 163, 88, 1);
   font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+}
+.sort-link.active::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  background-color: #46a358;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+.sort-link {
+  padding: 10px 20px;
+  position: relative;
+}
+.sort-link a {
+  transition: transform 0.3s ease;
+  font-size: 15px;
+  line-height: 16px;
+  display: inline-block;
+}
+.sort-link.active a {
+  color: #46a358;
+  font-weight: 700;
+}
+.sort-link:hover a {
+  color: rgba(70, 163, 88, 1);
+  font-weight: 700;
+  transform: scale(1.1);
+}
+.categories-link:hover a {
+  color: rgba(70, 163, 88, 1);
+  font-weight: 700;
+}
+.select-box {
+  font-size: 15px;
+  line-height: 16px;
+  color: rgba(61, 61, 61, 1);
+}
+.product-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: rgba(70, 163, 88, 1);
+  margin-top: 9px;
+}
+.product-name {
+  font-size: 16px;
+  line-height: 16px;
+  color: rgba(61, 61, 61, 1);
+  margin: 8px 0;
+}
+.product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 258px;
+  min-height: 300px;
+  background-color: rgba(251, 251, 251, 1);
+}
+.product-img img {
+  object-fit: contain;
+  width: 250px;
+  height: 250px;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+.pagination ul {
+  display: flex;
+  gap: 10px;
+}
+.pagination-link a {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 16px;
+  color: rgba(61, 61, 61, 1);
+}
+.pagination-link a:hover {
+  background-color: rgba(70, 163, 88, 1);
+  color: rgba(255, 255, 255, 1);
+}
+.pagination-link.active a {
+  background-color: rgba(70, 163, 88, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  border: none;
 }
