@@ -8,38 +8,160 @@
     <title>Document</title>
   </head>
   <body class="page">
-    <header class="header">
-      <img src="images/greenshop.png" alt="greenshop" class="header-logo" />
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="link-list"><a href="#">Home</a></li>
-          <li class="link-list"><a href="#">Shop</a></li>
-          <li class="link-list"><a href="#">Plant Care</a></li>
-          <li class="link-list"><a href="#">Blogs</a></li>
-        </ul>
-      </nav>
-      <a href="registration.html" class="reg-link">
-        <img src="images/logout.svg" alt="Login" class="logout" />Login</a
-      >
-    </header>
+    <div class="container">
+      <header class="header">
+        <img src="images/greenshop.png" alt="greenshop" class="header-logo" />
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="link-list active"><a href="#">Home</a></li>
+            <li class="link-list"><a href="#">Shop</a></li>
+            <li class="link-list"><a href="#">Plant Care</a></li>
+            <li class="link-list"><a href="#">Blogs</a></li>
+          </ul>
+        </nav>
+        <a href="registration.html" class="reg-link">
+          <img src="images/logout.svg" alt="Login" class="logout" />Login</a
+        >
+      </header>
+    </div>
     <main>
-      <section class="intro">
-        <div class="intro-description">
-          <p class="upper-text">Welcome to GreenShop</p>
-          <h1 class="main-title">
-            Let’s Make a Better <span class="title-planet">Planet</span>
-          </h1>
-          <p class="intro-text">
-            We are an online plant shop offering a wide range of cheap and
-            trendy plants. Use our plants to create an unique Urban Jungle.
-            Order your favorite plants!
-          </p>
-          <a href="#" class="intro-button">SHOP NOW</a>
+      <div class="container">
+        <section class="intro">
+          <div class="intro-description">
+            <p class="upper-text">Welcome to GreenShop</p>
+            <h1 class="main-title">
+              Let’s Make a Better <span class="title-planet">Planet</span>
+            </h1>
+            <p class="intro-text">
+              We are an online plant shop offering a wide range of cheap and
+              trendy plants. Use our plants to create an unique Urban Jungle.
+              Order your favorite plants!
+            </p>
+            <a href="#" class="intro-button">SHOP NOW</a>
+          </div>
+          <div class="intro-images">
+            <img src="images/img-banner.png" alt="plants" />
+          </div>
+        </section>
+        <div class="container clearfix">
+          <aside class="categories">
+            <div class="categories-box">
+              <h2 class="categories-title">Categories</h2>
+              <ul class="categories-list">
+                <li class="categories-link active">
+                  <a href="#">House Plants</a>
+                </li>
+                <li class="categories-link">
+                  <a href="#">Potter Plants</a>
+                </li>
+                <li class="categories-link"><a href="#">Seeds</a></li>
+                <li class="categories-link"><a href="#">Small Plants</a></li>
+                <li class="categories-link"><a href="#">Big Plants</a></li>
+                <li class="categories-link"><a href="#">Succulents</a></li>
+                <li class="categories-link"><a href="#">Trerrariums</a></li>
+                <li class="categories-link"><a href="#">Gardening</a></li>
+                <li class="categories-link"><a href="#">Accessories</a></li>
+              </ul>
+            </div>
+            <img src="images/banner.png" alt="sale" class="baner" />
+          </aside>
+          <section class="content">
+            <div class="filters">
+              <div class="sort-menu">
+                <ul class="sort-list">
+                  <li class="sort-link active"><a href="#">All Plants</a></li>
+                  <li class="sort-link"><a href="#">New Arrivals</a></li>
+                  <li class="sort-link"><a href="#">Sale</a></li>
+                </ul>
+              </div>
+              <div class="select-box">
+                <label for="select">Short by:</label>
+                <select name="select" id="select">
+                  <option value="Default sorting">Default sorting</option>
+                </select>
+              </div>
+            </div>
+            <div class="product-list">
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/barberton.png" alt="Barberton Daisy" />
+                </div>
+                <p class="product-name">Barberton Daisy</p>
+                <p class="product-price">$119.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/andgel.png" alt="Angel Wing Begonia" />
+                </div>
+                <p class="product-name">Angel Wing Begonia</p>
+                <p class="product-price">$169.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/african.png" alt="African Violet" />
+                </div>
+                <p class="product-name">African Violet</p>
+                <p class="product-price">$199.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/spider.png" alt="Beach Spider Lily" />
+                </div>
+                <p class="product-name">Beach Spider Lily</p>
+                <p class="product-price">$129.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/blushing.png" alt="Blushing Bromeliad" />
+                </div>
+                <p class="product-name">Blushing Bromeliad</p>
+                <p class="product-price">$139.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/aluminum.png" alt="Aluminum Plant" />
+                </div>
+                <p class="product-name">Aluminum Plant</p>
+                <p class="product-price">$179.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/birds.png" alt="Bird's Nest Fern" />
+                </div>
+                <p class="product-name">Bird's Nest Fern</p>
+                <p class="product-price">$99.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/broadleaf.png" alt="Broadleaf Lady Palm" />
+                </div>
+                <p class="product-name">Broadleaf Lady Palm</p>
+                <p class="product-price">$59.00</p>
+              </div>
+              <div class="product">
+                <div class="product-img">
+                  <img src="images/chinese.png" alt="Chinese Evergreen" />
+                </div>
+                <p class="product-name">Chinese Evergreen</p>
+                <p class="product-price">$39.00</p>
+              </div>
+            </div>
+            <div class="pagination">
+              <ul>
+                <li class="pagination-link active"><a href="#">1</a></li>
+                <li class="pagination-link"><a href="#">2</a></li>
+                <li class="pagination-link"><a href="#">3</a></li>
+                <li class="pagination-link"><a href="#">4</a></li>
+                <li class="pagination-link">
+                  <a href="#"
+                    ><img src="images/arrow-right.svg" alt="arrow"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
-        <div class="intro-images">
-          <img src="images/img-banner.png" alt="plants" />
-        </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>
