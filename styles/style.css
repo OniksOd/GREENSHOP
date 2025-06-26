@@ -161,14 +161,10 @@ input {
 }
 .header {
   display: flex;
-  width: 100%;
   border-bottom: 1px solid rgba(70, 163, 88, 0.5);
   padding: 30px 0 13px;
   align-items: center;
   justify-content: space-between;
-}
-.header-logo {
-  width: 150px;
 }
 .reg-link {
   display: flex;
@@ -194,7 +190,9 @@ input {
 .logout {
   margin-right: 3px;
 }
-
+.nav {
+  flex-grow: 1;
+}
 .nav-list {
   display: flex;
   gap: 50px;
@@ -233,7 +231,6 @@ input {
 }
 
 .intro-description {
-  flex-direction: column;
   width: 50%;
   padding-left: 20px;
 }
@@ -270,6 +267,7 @@ input {
   color: #46a358;
 }
 .intro-button {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
@@ -308,10 +306,10 @@ input {
 .categories {
   display: flex;
   flex-direction: column;
-  max-width: 20%;
+  max-width: 310px;
   background-color: rgba(251, 251, 251, 1);
   margin-top: 15px;
-  padding-bottom: 50px;
+  margin-bottom: 90px;
 }
 .baner {
   margin-top: auto;
@@ -370,14 +368,12 @@ input {
   line-height: 16px;
   color: rgba(61, 61, 61, 1);
 }
-.clearfix {
+.content-box {
   display: flex;
 }
 .content {
   max-width: 80%;
   padding-left: 20px;
-  display: flex;
-  flex-direction: column;
 }
 .product-list {
   display: flex;
@@ -402,11 +398,31 @@ input {
   border-top: 1px solid rgba(251, 251, 251, 1);
   width: calc(33.333% - 30px);
 }
+.product:hover {
+  border-color: rgba(70, 163, 88, 1);
+}
+.product:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
 .product-img {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  text-align: center;
   background-color: rgba(251, 251, 251, 1);
+  position: relative;
+  padding: 25px 0;
+}
+.product-link {
+  position: absolute;
+  display: flex;
+  gap: 25px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 .product-img img {
   object-fit: contain;
@@ -426,7 +442,6 @@ input {
   border: 1px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
   align-items: center;
-  text-align: center;
   justify-content: center;
   font-weight: 300;
   font-size: 18px;
@@ -453,24 +468,35 @@ input {
   gap: 28px;
   margin-top: 80px;
   padding: 20px 0;
+  margin-bottom: 100px;
 }
 .plants {
+  position: relative;
+  width: 586px;
+  padding-top: 52px;
+}
+.plants-content {
   display: flex;
   background-color: rgba(251, 251, 251, 1);
+  padding-bottom: 35px;
+}
+.plants-img-wrapper {
+  flex: 0 1 288px;
+  min-width: 288px;
 }
 .plants-img {
-  width: 50%;
-  margin-top: -60px;
+  top: 0;
+  position: absolute;
 }
 .plants-text {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  width: 50%;
+  flex: 0 1 auto;
 }
 .plants-title {
-  padding: 37px 0px 9px 119px;
+  padding-left: 48%;
   font-weight: 900;
   font-size: 18px;
   line-height: 24px;
@@ -486,20 +512,12 @@ input {
   padding-right: 30px;
 }
 .plants-text a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px 20px 8px 16px;
   font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
   text-transform: none;
 }
 .posts {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -510,28 +528,24 @@ input {
 .posts-item {
   display: flex;
   text-align: left;
-  justify-content: flex-start;
   flex-direction: column;
   width: 25%;
   background-color: rgba(251, 251, 251, 1);
 }
 .posts-title {
-  margin: 0;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 30px;
   line-height: 16px;
-  padding: 100px 0 15px;
   color: rgba(61, 61, 61, 1);
 }
 .posts-text {
-  margin: 0;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   font-weight: 400;
   color: rgba(114, 114, 114, 1);
 }
 .posts-date {
   font-weight: 500;
-  font-size: 14px;
   line-height: 16px;
   color: rgba(70, 163, 88, 1);
 }
@@ -540,19 +554,18 @@ input {
   font-size: 20px;
   line-height: 26px;
   color: rgba(61, 61, 61, 1);
+  margin: 0;
 }
 .posts-description {
-  font-weight: 400;
   line-height: 22px;
   color: rgba(114, 114, 114, 1);
+  margin: 0;
 }
 .posts-link {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
   font-weight: 500;
-  font-size: 14px;
   line-height: 16px;
   color: rgba(61, 61, 61, 1);
   width: fit-content;
