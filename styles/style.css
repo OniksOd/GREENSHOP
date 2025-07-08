@@ -40,7 +40,20 @@ body {
   font-size: 14px;
   line-height: 24px;
 }
-
+h3,
+h4,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: rgba(61, 61, 61, 1);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .registration-form {
   box-sizing: border-box;
   position: relative;
@@ -62,15 +75,7 @@ body {
   padding: 0;
   border: none;
 }
-a {
-  text-decoration: none;
-  color: rgba(61, 61, 61, 1);
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -190,6 +195,7 @@ ul {
 .nav-list {
   display: flex;
   gap: 50px;
+  justify-content: center;
   align-items: center;
   font-size: 16px;
 }
@@ -361,10 +367,11 @@ ul {
 .categories {
   display: flex;
   flex-direction: column;
-  max-width: 310px;
+  width: 300px;
   background-color: rgba(251, 251, 251, 1);
   margin-top: 15px;
   margin-bottom: 90px;
+  flex-shrink: 0;
 }
 .baner {
   margin-top: auto;
@@ -470,6 +477,7 @@ ul {
 .product-link {
   position: absolute;
   display: flex;
+  justify-content: center;
   gap: 25px;
   left: 0;
   right: 0;
@@ -768,14 +776,17 @@ ul {
 }
 .footer-information {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
+  max-width: 1064px;
+}
+.footer-container {
   border-bottom: 1px solid rgba(70, 163, 88, 0.2);
   padding: 33px 25px 29px;
-  gap: 30px;
 }
 .footer-social {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer-payment {
   display: flex;
@@ -783,8 +794,7 @@ ul {
 }
 
 .footer-link {
-  max-width: 137px;
-  width: 100%;
+  width: 22%;
 }
 .footer-link li {
   padding-top: 8px;
@@ -798,13 +808,4 @@ ul {
   line-height: 30px;
   color: rgba(61, 61, 61, 1);
   background-color: white;
-}
-.footer-socials {
-  max-width: 354px;
-  width: 100%;
-}
-.footer li > h3,
-h4,
-p {
-  margin: 0;
 }
