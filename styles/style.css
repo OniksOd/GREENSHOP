@@ -491,6 +491,10 @@ ul {
 .product-img img {
   object-fit: contain;
 }
+.product-icon:hover {
+  fill: rgba(70, 163, 88, 1);
+  transform: scale(1.1);
+}
 
 .discount {
   position: absolute;
@@ -785,16 +789,11 @@ ul {
 }
 .footer-social {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-}
-.footer-payment {
-  display: flex;
-  justify-content: space-between;
 }
 
 .footer-link {
-  width: 22%;
+  width: 23%;
 }
 .footer-link li {
   padding-top: 8px;
@@ -808,4 +807,25 @@ ul {
   line-height: 30px;
   color: rgba(61, 61, 61, 1);
   background-color: white;
+}
+.social-icon {
+  fill: rgba(70, 163, 88, 0.6);
+}
+.footer-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(70, 163, 88, 0.2);
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.payment-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.gradient-icon {
+  fill: rgba(70, 163, 88, 1);
 }
