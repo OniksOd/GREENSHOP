@@ -183,9 +183,11 @@ ul {
   color: #46a358;
   border: 1px solid #46a358;
 }
-/* .arrow {
+.header-icon {
   fill: currentColor;
-} */
+  margin-right: 5px;
+}
+
 .logout {
   margin-right: 3px;
 }
@@ -644,7 +646,7 @@ ul {
 }
 .posts-link {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   font-weight: 500;
   line-height: 16px;
@@ -659,6 +661,10 @@ ul {
 }
 .posts-link:hover {
   color: rgba(70, 163, 88, 1);
+}
+.arrow-right {
+  fill: currentColor;
+  margin-left: 4px;
 }
 .posts-box {
   display: flex;
@@ -828,4 +834,5 @@ ul {
 }
 .gradient-icon {
   fill: rgba(70, 163, 88, 1);
+  margin-right: 9px;
 }
