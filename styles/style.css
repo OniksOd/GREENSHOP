@@ -89,14 +89,15 @@ ul {
   border-radius: 5px;
   border: 1px #eaeaea solid;
 }
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 .checkbox-custom {
   display: flex;
   align-items: center;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 .checkbox-custom::before {
   content: "";
@@ -105,7 +106,6 @@ ul {
   border: 1px solid #080808;
   border-radius: 3px;
   display: inline-block;
-  cursor: pointer;
 }
 #agreement:checked + .checkbox-custom::before {
   content: "\2713";
