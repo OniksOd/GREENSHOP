@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
+
     <title>Romanov Kyrylo</title>
   </head>
   <body class="page">
@@ -37,7 +38,7 @@
             <li class="link-list"><a href="#">Blogs</a></li>
           </ul>
         </nav>
-        <a href="registration.html" class="reg-link">
+        <a href="registration.html" class="reg-link" id="regLink">
           <svg class="header-icon" viewBox="0 0 16 15" width="16" height="15">
             <use href="images/icons.svg#icon-logout" x="0" y="0"></use>
           </svg>
@@ -47,6 +48,10 @@
     </div>
     <main>
       <div class="container">
+        <div id="preloader" class="preloader hidden">
+          <div class="ring"></div>
+          <span class="loading">loading...</span>
+        </div>
         <section class="intro">
           <div class="intro-description">
             <p class="upper-text">Welcome to GreenShop</p>
@@ -979,5 +984,16 @@
       </div>
       <p class="rights">&copy; 2021 GreenShop. All Rights Reserved.</p>
     </footer>
+    <script>
+      const preloader = document.getElementById("preloader");
+      const regLink = document.getElementById("regLink");
+      regLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        preloader.classList.remove("hidden");
+        setTimeout(() => {
+          window.location.href = "registration.html";
+        }, 5000);
+      });
+    </script>
   </body>
 </html>
