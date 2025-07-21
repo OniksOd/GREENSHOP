@@ -186,6 +186,7 @@ ul {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  min-width: 375px;
 }
 .header {
   display: flex;
@@ -382,7 +383,6 @@ ul {
   overflow: hidden;
   width: 100%;
   position: relative;
-  min-width: 375px;
 }
 .intro {
   background-color: #f5f5f580;
@@ -611,6 +611,7 @@ ul {
 .pagination {
   display: flex;
   justify-content: flex-end;
+  margin-top: 20px;
 }
 .pagination ul {
   display: flex;
@@ -653,8 +654,9 @@ ul {
 }
 .plants {
   position: relative;
-  width: 586px;
+  width: 50%;
   padding-top: 52px;
+  flex-wrap: wrap;
 }
 .plants-content {
   display: flex;
@@ -662,12 +664,13 @@ ul {
   padding-bottom: 35px;
 }
 .plants-img-wrapper {
-  flex: 0 1 288px;
-  min-width: 288px;
+  top: -50px;
+  left: 0;
+  position: absolute;
+  width: 50%;
+  max-height: 110%;
 }
 .plants-img {
-  top: 0;
-  position: absolute;
 }
 .plants-text {
   display: flex;
@@ -675,9 +678,11 @@ ul {
   align-items: flex-end;
   text-align: right;
   flex: 0 1 auto;
+  width: 50%;
+  margin-left: auto;
 }
 .plants-title {
-  padding-left: 48%;
+  max-width: 100%;
   font-weight: 900;
   font-size: 18px;
   line-height: 24px;
@@ -871,6 +876,7 @@ ul {
   justify-content: space-between;
   background: linear-gradient(90deg, #edf6ef 0%, #52c368 100%);
   padding: 27px 20px;
+  color: rgba(61, 61, 61, 1);
 }
 .footer-gradient li {
   display: flex;
@@ -939,7 +945,8 @@ ul {
   position: relative;
   width: 20px;
   height: 20px;
-  background: rgba(70, 163, 88, 1);
+  background: white;
+
   margin-left: 5px;
   order: 2;
   border: none;
@@ -949,7 +956,7 @@ ul {
   position: absolute;
   width: 14px;
   height: 2px;
-  background: white;
+  background: rgba(70, 163, 88, 1);
   left: 3px;
   transition: background-color 0.3s, opacity 0.3s, transform 0.5s;
 }
@@ -1017,7 +1024,7 @@ ul {
     gap: 90px;
   }
   .plants {
-    width: 100%;
+    max-width: 586px;
   }
   .plants-title {
     font-size: 14px;
@@ -1052,12 +1059,16 @@ ul {
   .footer-title {
     font-size: 14px;
   }
-  .footer-plants {
-    flex-wrap: wrap;
-  }
   .footer-list {
     flex-wrap: wrap;
     gap: 20px;
+  }
+  .footer-list li {
+    padding-right: 20px;
+    width: calc(33% - 20px);
+  }
+  .footer-form {
+    margin: 0 auto;
   }
   .footer-gradient {
     padding: 20px 15px;
@@ -1065,6 +1076,9 @@ ul {
   }
   .footer-link a {
     font-size: 12px;
+  }
+  .footer-plants {
+    flex-wrap: wrap;
   }
 }
 
@@ -1136,7 +1150,7 @@ ul {
   }
   .intro-images {
     width: 30%;
-    margin-top: -60px;
+    margin-top: -50px;
   }
   .intro-button {
     font-size: 10px;
@@ -1161,11 +1175,9 @@ ul {
   .product-name {
     font-size: 12px;
   }
-  .product-list {
-    flex-wrap: wrap;
-  }
   .product {
     width: 100%;
+    max-width: 350px;
   }
   .product-price {
     font-size: 14px;
@@ -1200,8 +1212,8 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-  .plants-text {
-    width: 100%;
+  .plants {
+    width: auto;
   }
   .posts-title {
     font-size: 18px;
@@ -1224,19 +1236,17 @@ ul {
   .form-text {
     font-size: 12px;
   }
-
-  .footer-plants {
-    flex-wrap: wrap;
-  }
   .footer-list {
     flex-wrap: wrap;
     gap: 20px;
   }
   .footer-gradient {
+    display: block;
+    overflow: hidden;
     padding: 15px 10px;
     font-size: 10px;
     flex-wrap: wrap;
-    gap: 5px;
+    line-height: 1;
   }
   .footer-link a {
     font-size: 10px;
@@ -1247,5 +1257,37 @@ ul {
   .footer-link {
     width: 46%;
     gap: 0;
+  }
+  .page {
+    padding: 5px 10px;
+  }
+  .plants-img-wrapper {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .plants-description {
+    margin-left: -20px;
+  }
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-gradient li {
+    float: right;
+    width: 55%;
+    margin-bottom: 5px;
+  }
+  .footer-gradient li:first-child {
+    float: left;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-list li {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 100px;
+    background-size: auto 60px;
+    background-position: 0 50%;
   }
 }
